@@ -32,16 +32,15 @@ export class Cuenta{
         }
             
         retiro(valor){
+            _retiro(valor,0)
+        }
+        // metodo privado
+        _retiro(valor,comision){
+            valor = valor*(1+comision/100);
             if(valor < 0)
                 console.log("No puedes retirar negativos")
             else if(valor <= this.#saldo)
-                this.#saldo -= valor;
-
-            // if(this.tipo == 'Corriente')
-            //     valor = valor*1.05;
-            // else if (this.tipo == 'Ahorro')
-            //     valor = valor*1.02;
-                
+                this.#saldo -= valor;       
             return this.#saldo;
         }
         

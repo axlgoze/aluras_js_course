@@ -13,23 +13,21 @@ const cuentaDeAxel = new CuentaCorriente(cliente,'1','001');
 const cuentaDeMaria = new CuentaCorriente(cliente2,'2','002');
 // creacion de cuentas de ahorro
 const cuentaDeAhorroAxel = new CuentaAhorro(cliente,'9985','001',0);
-// console.log(cuentaDeAxel);
-// console.log(cuentaDeAhorroAxel);
 
-// console.log(cuentaDeAxel);
-// console.log(cuentaDeAxel.deposito(150));
-// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-// console.log(cuentaDeAxel.verSaldo());
-// console.log('Retiro de 50:')
-// console.log(cuentaDeAxel.retiro(50));
-// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-// console.log(cuentaDeAxel.verSaldo());
+console.log(cuentaDeAxel);
+cuentaDeAxel.deposito(150);
+console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+console.log(cuentaDeAxel.verSaldo());
+cuentaDeAxel.retiro(50);
+console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+console.log(cuentaDeAxel.verSaldo());
 
-// console.log('Cuenta de ahorro')
-// console.log(cuentaDeAhorroAxel)
-// console.log(cuentaDeAhorroAxel.deposito(150));
-// console.log(cuentaDeAhorroAxel.verSaldo());
-// console.log(cuentaDeAhorroAxel.retiro(50));
-// console.log(cuentaDeAhorroAxel.verSaldo());
+console.log(cuentaDeAhorroAxel)
+cuentaDeAhorroAxel.deposito(150);
+console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+console.log(cuentaDeAhorroAxel.verSaldo());
+cuentaDeAhorroAxel.retiro(50);
+console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+console.log(cuentaDeAhorroAxel.verSaldo());
 
 cuentaDeAxel.prueba();
