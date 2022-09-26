@@ -1,1 +1,1 @@
-# notas del curos de programacion orientada a objetos con JavaScript.
+# notas del curso de programacion orientada a objetos con JavaScript.

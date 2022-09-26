@@ -3,7 +3,7 @@ export class CuentaAhorro{
     #saldo;
     //constuir la pieza
     constructor(cliente,numero,agencia,saldo){
-        this.cliente = cliente;
+        // this.cliente = cliente;
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente=cliente;
@@ -16,7 +16,7 @@ deposito(valor){
     //	this.saldo = this.saldo+valor;
         if(valor > 0)
             this.#saldo += valor;
-        return this.#saldo
+        // return this.#saldo;
     }
         
     retiro(valor){
