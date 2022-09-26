@@ -4,15 +4,23 @@ export class Cuenta{
     #cliente;
     #saldo;
     //constuir la pieza
-    constructor(tipo,cliente,numero,agencia,saldo){
+    constructor(cliente,numero,agencia,saldo){
         // this.cliente = cliente;
-        this.tipo=tipo;
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente=cliente;
         this.#saldo=saldo;
-
     }
+
+    
+	set cliente(valor){
+		if(valor instanceof Cliente)
+			this.#cliente=valor;
+	}
+
+	get cliente(){
+		return this.#cliente;
+	}
 
     
     deposito(valor){
@@ -29,10 +37,10 @@ export class Cuenta{
             else if(valor <= this.#saldo)
                 this.#saldo -= valor;
 
-            if(this.tipo == 'Corriente')
-                valor = valor*1.05;
-            else if (this.tipo == 'Ahorro')
-                valor = valor*1.02;
+            // if(this.tipo == 'Corriente')
+            //     valor = valor*1.05;
+            // else if (this.tipo == 'Ahorro')
+            //     valor = valor*1.02;
                 
             return this.#saldo;
         }
