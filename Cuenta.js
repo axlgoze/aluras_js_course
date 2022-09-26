@@ -1,13 +1,17 @@
+// import { CuentaCorriente } from "./CuentaCorriente";
+
 export class Cuenta{
     #cliente;
     #saldo;
     //constuir la pieza
-    constructor(cliente,numero,agencia,saldo){
+    constructor(tipo,cliente,numero,agencia,saldo){
         // this.cliente = cliente;
+        this.tipo=tipo;
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente=cliente;
         this.#saldo=saldo;
+
     }
 
     
@@ -20,13 +24,17 @@ export class Cuenta{
         }
             
         retiro(valor){
-            if(valor < 0){
-                // return this.#saldo;
+            if(valor < 0)
                 console.log("No puedes retirar negativos")
-            }else if(valor <this.#saldo){
+            else if(valor <= this.#saldo)
                 this.#saldo -= valor;
-            }
-            return this.#saldo
+
+            if(this.tipo == 'Corriente')
+                valor = valor*1.05;
+            else if (this.tipo == 'Ahorro')
+                valor = valor*1.02;
+                
+            return this.#saldo;
         }
         
         verSaldo(){
