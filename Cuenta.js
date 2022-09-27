@@ -5,7 +5,9 @@ export class Cuenta{
     #saldo;
     //constuir la pieza
     constructor(cliente,numero,agencia,saldo){
-        // this.cliente = cliente;
+        if(this.constructor == Cuenta){
+            throw new Error("No se debe instanciar objetos de la clase cuenta");
+        }
         this.numero = numero;
         this.agencia = agencia;
         this.#cliente=cliente;

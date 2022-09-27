@@ -2,6 +2,7 @@
 import {Cliente} from './Cliente.js'
 import { CuentaCorriente } from './CuentaCorriente.js';
 import { CuentaAhorro } from './CuentaAhorro.js';
+import { Cuenta } from './Cuenta.js';
 
 //Creacion de instancias
 // creacion de clientes
@@ -14,20 +15,23 @@ const cuentaDeMaria = new CuentaCorriente(cliente2,'2','002');
 // creacion de cuentas de ahorro
 const cuentaDeAhorroAxel = new CuentaAhorro(cliente,'9985','001',0);
 
-console.log(cuentaDeAxel);
-cuentaDeAxel.deposito(150);
-console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-console.log(cuentaDeAxel.verSaldo());
-cuentaDeAxel.retiro(50);
-console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-console.log(cuentaDeAxel.verSaldo());
+// console.log(cuentaDeAxel);
+// cuentaDeAxel.deposito(150);
+// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+// console.log(cuentaDeAxel.verSaldo());
+// cuentaDeAxel.retiro(50);
+// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+// console.log(cuentaDeAxel.verSaldo());
 
-console.log(cuentaDeAhorroAxel)
-cuentaDeAhorroAxel.deposito(150);
-console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-console.log(cuentaDeAhorroAxel.verSaldo());
-cuentaDeAhorroAxel.retiro(50);
-console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
-console.log(cuentaDeAhorroAxel.verSaldo());
+// console.log(cuentaDeAhorroAxel)
+// cuentaDeAhorroAxel.deposito(150);
+// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+// console.log(cuentaDeAhorroAxel.verSaldo());
+// cuentaDeAhorroAxel.retiro(50);
+// console.log(`El saldo de la cuenta de ${cliente.nombreCliente} es:`);
+// console.log(cuentaDeAhorroAxel.verSaldo());
 
-cuentaDeAxel.prueba();
+console.log(cuentaDeAhorroAxel);
+// ahora no se puede instanciar la clase base
+const cuentaSimple = new Cuenta(cliente,'098','001',100);
+console.log(cuentaSimple)
