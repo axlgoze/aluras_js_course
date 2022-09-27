@@ -9,7 +9,7 @@ export class Empleado{
         this.#salario = salario;
         this.#clave = '';
     }
-    // getter
+    
     get clave(){
         return this.#clave
     }

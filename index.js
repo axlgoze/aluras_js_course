@@ -6,6 +6,9 @@ import { Gerente } from './Empleados/Gerente.js';
 import { SistemaAutenticacion } from './SistemaAutenticacion.js';
 
 const cliente = new Cliente('Axel','1234543','1231231');
+cliente.asignarClave('1110');
+console.log(SistemaAutenticacion.login(cliente,'111'));
+
 const cliente2 = new Cliente('María','1236544','1233281');
 
 const empleado = new Empleado ('Juan Perez', '123',10000);

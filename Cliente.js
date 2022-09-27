@@ -2,12 +2,22 @@ export class Cliente{
 	nombreCliente;
 	dniCliente;
 	rfcCliente;
+	#clave;
 
 	constructor(nombreCliente,dniCliente, rfcCliente){
 		this.nombreCliente= nombreCliente;
 		this.dniCliente = dniCliente;
 		this.rfcCliente= rfcCliente;
+		this.#clave='';
 	}
+	
+    get clave(){
+        return this.#clave
+    }
+
+    asignarClave(clave){
+        this.#clave=clave;
+    }
 }
 
 // //Creando un cliente o instancia del molde cliente
