@@ -10,8 +10,8 @@ export class Empleado{
         this.#clave = '';
     }
     
-    get clave(){
-        return this.#clave
+    autenticable(clave){
+        return clave == this.#clave;
     }
 
     asignarClave(clave){

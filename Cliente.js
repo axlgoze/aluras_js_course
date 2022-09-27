@@ -10,10 +10,10 @@ export class Cliente{
 		this.rfcCliente= rfcCliente;
 		this.#clave='';
 	}
-	
-    get clave(){
-        return this.#clave
-    }
+
+    // autenticable(clave){
+    //     return false;
+    // }
 
     asignarClave(clave){
         this.#clave=clave;
