@@ -34,7 +34,8 @@ export class Cuenta{
         }
             
         retiro(valor){
-            _retiro(valor,0)
+            // metodo abstracto
+            throw new Error("Debe implementar el método retirar de cuenta en su clase");
         }
         // metodo privado
         _retiro(valor,comision){

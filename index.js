@@ -3,6 +3,7 @@ import {Cliente} from './Cliente.js'
 import { CuentaCorriente } from './CuentaCorriente.js';
 import { CuentaAhorro } from './CuentaAhorro.js';
 import { Cuenta } from './Cuenta.js';
+import { CuentaNomina } from './CuentaNomina.js';
 
 //Creacion de instancias
 // creacion de clientes
@@ -33,5 +34,14 @@ const cuentaDeAhorroAxel = new CuentaAhorro(cliente,'9985','001',0);
 
 console.log(cuentaDeAhorroAxel);
 // ahora no se puede instanciar la clase base
-const cuentaSimple = new Cuenta(cliente,'098','001',100);
-console.log(cuentaSimple)
+// const cuentaSimple = new Cuenta(cliente,'098','001',100);
+// console.log(cuentaSimple)
+
+
+const cuentaNominaAxel = new CuentaNomina(cliente,'004','004',100);
+console.log(cuentaNominaAxel);
+cuentaNominaAxel.deposito(150);
+console.log(cuentaNominaAxel.verSaldo());
+
+cuentaNominaAxel.retiro(50);
+console.log(cuentaNominaAxel.verSaldo());
