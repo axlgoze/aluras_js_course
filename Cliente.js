@@ -12,9 +12,9 @@ export class Cliente{
 		this.#clave='';
 	}
 
-    // autenticable(clave){
-    //     return true;
-    // }
+    autenticable(clave){
+        return true;
+    }
 
     asignarClave(clave){
         this.#clave=clave;
